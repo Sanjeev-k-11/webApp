@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Profile</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Spline Viewer -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.99/build/spline-viewer.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: sans-serif;
+    }
+
+    .spline-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    spline-viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+  <!-- Background -->
+  <div class="spline-background">
+    <spline-viewer url="https://prod.spline.design/ydhqj98SPLk4M7a1/scene.splinecode"></spline-viewer>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Header -->
+    <header class="container mx-auto px-4 md:px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-bold">Web Profile</div>
+        <nav class="hidden md:flex space-x-6 text-gray-300 pointer-events-auto">
+          <a href="#" class="hover:text-white transition">Home</a>
+          <a href="about.html" class="hover:text-white transition">About Us</a>
+          <a href="website.html" class="hover:text-white transition">Website</a>
+          <a href="contact.html" class="hover:text-white transition">Contact Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col md:flex-row items-center min-h-screen">
+      
+      <!-- Profile Image -->
+      <div class="md:w-1/2 flex justify-center md:justify-start mb-10 md:mb-0 md:pr-12">
+        <img src="./image/logo.jpeg" alt="Sanjeev Kumar" class="rounded-xl shadow-xl w-64 md:w-80 lg:w-96 h-auto object-cover pointer-events-auto" />
+      </div>
+
+      <!-- Info Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <p class="text-lg text-gray-300 mb-2">Hello, I'm</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">Sanjeev Kumar</h1>
+        <p class="text-xl mb-6"><span class="text-orange-500 font-semibold">Web Development</span></p>
+        <p class="text-gray-400 text-base md:text-lg mb-8 leading-relaxed">
+          I specialize in creating dynamic, responsive, and user-friendly websites tailored to meet client needs. With a strong foundation in modern web technologies and a passion for clean, efficient code, I turn ideas into powerful digital solutions. Whether it's a personal portfolio, business website, or custom web application, I ensure high-quality results that drive engagement and performance.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="mb-8 md:mb-10">
+          <a href="https://mednova-frontend.onrender.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition pointer-events-auto">
+            Visit Website
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center md:justify-start space-x-6 text-2xl text-gray-400">
+          <a href="#" class="hover:text-white transition pointer-events-auto" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white transition pointer-events-auto" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-white transition pointer-events-auto" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#" class="hover:text-white transition pointer-events-auto" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-white transition pointer-events-auto" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
